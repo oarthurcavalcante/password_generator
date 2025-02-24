@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="cont_logo">
+        <img src= "{{ url_for('static', filename='../static/imgs/logo.png') }}" alt="logo" class="logo">
+    </div>
+    <div class="container">
+        <h1>Welcome to the Password Generator!</h1>
+        <form id="passwordForm">
+            <label for="letters">How many letters would you like in your password?</label>
+            <input type="number" id="letters" name="letters" required>
+            
+            <label for="symbols">How many symbols would you like?</label>
+            <input type="number" id="symbols" name="symbols" required>
+            
+            <label for="numbers">How many numbers would you like?</label>
+            <input type="number" id="numbers" name="numbers" required>
+            
+            <button type="submit">Generate Password</button>
+        </form>
+        <div id="passwordResult">
+            <h2>Your password is:</h2>
+            <p id="password"></p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
